@@ -1,0 +1,20 @@
+{
+  "name": "unit07-dom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "kill $(pgrep node) ; nodemon server.js &",
+    "stop": "kill $(pgrep node)"
+  },
+  "author": "kvlinden",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "http-status-codes": "^1.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}

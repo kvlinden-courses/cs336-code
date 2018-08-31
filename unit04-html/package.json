@@ -1,0 +1,14 @@
+{
+  "name": "unit04-html",
+  "version": "1.0.0",
+  "description": "Simple Node/Express server for static files",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "kvlinden",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

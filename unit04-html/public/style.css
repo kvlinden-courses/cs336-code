@@ -1,0 +1,28 @@
+body {
+    font-family: Helvetica, Ariel, sans-serif;
+}
+img {
+    width: 350px;
+}
+table {
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 10px;
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+thead {
+    color: white;
+    background: black;
+}
+#big-header {
+    font-size: 2.5em;
+}
+.main-topic {
+    font-weight: bold;
+}
+.main-topic:hover {
+    color: red;
+}

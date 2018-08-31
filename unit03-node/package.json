@@ -1,0 +1,14 @@
+{
+  "name": "unit03-node",
+  "version": "1.0.0",
+  "description": "unit 3",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "kvlinden",
+  "license": "ISC",
+  "dependencies": {
+    "http-status-codes": "^1.0.6"
+  }
+}
