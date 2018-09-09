@@ -30,7 +30,7 @@ var greetMe2 = function(names) {
     for (var name of names) {
         console.log("Hello, " + name + "!");
     }
-}
+};
 greetMe(["world", "galaxy", "universe"]);
 greetMe2(["world", "galaxy", "universe"]);
 
@@ -43,10 +43,10 @@ runThis(function(names) { for (var name of names) { console.log("Hello, " + name
         ["world", "galaxy", "universe"]);
 
 // 5. ----------------------------------
-// A common use cases for anonymous functions.
-//document.querySelector('html').onclick = function() {
-//    alert('Ouch! Stop poking me!');
-//}
+// Common use cases for anonymous functions.
+document.querySelector('html').onclick = function() {
+    alert('Ouch! Stop poking me!');
+};
 var myList = [1,2,3].map(function(x) {return x*2;});
 console.log(myList);
 
@@ -86,7 +86,7 @@ function Shape(x, y) {
 Shape.prototype.move = function(newX, newY) {
     this.x = newX;
     this.y = newY;
-}
+};
 var s1 = new Shape(0, 0);
 console.log(s1);
 var s2 = new Shape(1, 2);
@@ -103,7 +103,7 @@ function Rectangle(x, y, width, height) {
 Rectangle.prototype = Object.create(Shape.prototype);
 Rectangle.prototype.area = function() {
     return this.width * this.height;
-}
+};
 var r1 = new Rectangle(1, 2, 1, 1);
 console.log(r1);
 console.log(r1.area());
@@ -119,7 +119,7 @@ function Circle(x, y, radius) {
 Circle.prototype = Object.create(Shape.prototype);
 Circle.prototype.area = function() {
     return Math.PI * this.radius * this.radius;
-}
+};
 var c1 = new Circle(1, 2, 1);
 console.log(c1.area());
 
