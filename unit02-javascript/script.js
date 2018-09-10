@@ -6,20 +6,20 @@
 
 // 1. ----------------------------------
 // Looseness: optional/dynamic typing
-// var test;
-// test = 42;
-// test = "forty-two";
-// test = true;
-// console.log(test);
+var test;
+test = 42;
+test = "forty-two";
+test = true;
+console.log(test);
 
 // 2. ----------------------------------
 // Sameness
-// console.log(1 == 1.0);
-// console.log(1 === 1.0);
-// console.log(1 == "1");
-// console.log(1 === "1");
-// console.log(1 == true);
-// console.log(1 === true);
+console.log(1 == 1.0);
+console.log(1 === 1.0);
+console.log(1 == "1");
+console.log(1 === "1");
+console.log(1 == true);
+console.log(1 === true);
 
 // 3. ----------------------------------
 // Functions as first-class objects
@@ -33,53 +33,53 @@ var greetMe2 = function(names) {
         console.log("Hello, " + name + "!");
     }
 };
-// greetMe(["world", "galaxy", "universe"]);
-// greetMe2(["world", "galaxy", "universe"]);
+greetMe(["world", "galaxy", "universe"]);
+greetMe2(["world", "galaxy", "universe"]);
 
 // 4. ----------------------------------
 // Anonymous functions
 function runThis(aFunction, args) {
     aFunction.call(null, args);
 }
-// runThis(function(names) {
-//     for (var name of names) {
-// 	console.log("Hello, " + name + "!"); }},
-//     ["world", "galaxy", "universe"]);
+runThis(function(names) {
+    for (var name of names) {
+	console.log("Hello, " + name + "!"); }},
+    ["world", "galaxy", "universe"]);
 
 // 5. ----------------------------------
 // Common use cases for anonymous functions.
 // document.querySelector('html').onclick = function() {
 //     alert('Ouch! Stop poking me!');
 // };
-// var myList = [1,2,3].map(function(x) {return x*2;});
-// console.log(myList);
+var myList = [1,2,3].map(function(x) {return x*2;});
+console.log(myList);
 
 // 6. ----------------------------------
 // Closures
-// function makeGreeter(salutation) {
-//     return function(names) {
-//         for (var name of names) {
-//             console.log(salutation + name + "!");
-//         }
-//     }
-// }
-// var friendlyGreeter = makeGreeter("Hello, ");
-// var unfriendlyGreeter = makeGreeter("Get lost, ");
-// friendlyGreeter(["world", "galaxy", "universe"]);
-// unfriendlyGreeter(["world", "galaxy", "universe"]);
+function makeGreeter(salutation) {
+    return function(names) {
+        for (var name of names) {
+            console.log(salutation + name + "!");
+        }
+    }
+}
+var friendlyGreeter = makeGreeter("Hello, ");
+var unfriendlyGreeter = makeGreeter("Get lost, ");
+friendlyGreeter(["world", "galaxy", "universe"]);
+unfriendlyGreeter(["world", "galaxy", "universe"]);
 
 // 7. ----------------------------------
 // Strange closure example
-// function buildListOfFunctions(list) {
-//     var result = [];
-//     for (var i = 0; i < list.length; i++) {
-//         result.push( function() {console.log("function " + i)} );
-//     }
-//     return result;
-// }
-// for (var f of buildListOfFunctions([1,2,3])) {
-//     f();
-// }
+function buildListOfFunctions(list) {
+    var result = [];
+    for (var i = 0; i < list.length; i++) {
+        result.push( function() {console.log("function " + i)} );
+    }
+    return result;
+}
+for (var f of buildListOfFunctions([1,2,3])) {
+    f();
+}
 
 // 8. ----------------------------------
 // Encapsulation
@@ -134,19 +134,19 @@ console.log(c1 instanceof Rectangle);
 
 // 11. ----------------------------------
 // Promises
-// let fs = require("fs");
-// let filename = "test.json";
+let fs = require("fs");
+let filename = "test.json";
 
-// function readFilePromise(filename){
-//     return new Promise(function (fulfill, reject){
-//         fs.readFile(filename, "utf8", function (err, res){
-//             if (err) reject(err);
-//             else fulfill(res);
-//         });
-//     });
-// }
+function readFilePromise(filename){
+    return new Promise(function (fulfill, reject){
+        fs.readFile(filename, "utf8", function (err, res){
+            if (err) reject(err);
+            else fulfill(res);
+        });
+    });
+}
 
-// readFilePromise(filename).then(
-//     (res) => console.log("Message: " + JSON.parse(res).message),
-//     (err) => console.log(err.toString())
-// );
+readFilePromise(filename).then(
+    (res) => console.log("Message: " + JSON.parse(res).message),
+    (err) => console.log(err.toString())
+);
