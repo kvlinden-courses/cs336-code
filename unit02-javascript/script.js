@@ -127,10 +127,6 @@ Circle.prototype.area = function() {
 var c1 = new Circle(1, 2, 1);
 console.log(c1.area());
 
-console.log(r1 instanceof Shape);
-console.log(c1 instanceof Shape);
-console.log(c1 instanceof Rectangle);
-
 
 // 11. ----------------------------------
 // Promises
