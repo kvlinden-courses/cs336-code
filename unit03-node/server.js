@@ -15,7 +15,6 @@ const server = http.createServer((req, res) => {
         res.writeHead(http_status.OK, {'Content-Type': 'text/plain'});
         res.end('Hello, Node.js!');
     } else {
-	console.log('testing...');
         res.writeHead(http_status.NOT_FOUND, {'Content-Type': 'text/plain'});
         res.end();
     }
