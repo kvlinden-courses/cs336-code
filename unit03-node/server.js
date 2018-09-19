@@ -11,6 +11,7 @@ const HOST = "127.0.0.1";
 const PORT = 3000;
 
 const server = http.createServer((req, res) => {
+    'use strict';
     if (req.url == '/hello') {
         res.writeHead(http_status.OK, {'Content-Type': 'text/plain'});
         res.end('Hello, Node.js!');
