@@ -25,6 +25,3 @@ server.listen(PORT, HOST, () => {
     console.log("Server running on " + HOST + ":" + PORT + ".");
 });
 
-// Load/Invoke a function from a custom module.
-let my_module = require("./module");
-console.log(my_module.my_function());
