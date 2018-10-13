@@ -1,9 +1,18 @@
+/**
+This script uses JavaScript DOM access functions to set up the menu toggling
+for the jQuery class example.
+ */
 "use strict";
 
+// Setup function to be run when the window is loaded.
 window.onload = function() {
+
+    // Set the toggle heading function for all h2 elements.
     for (let headingNode of document.getElementById("faqs").getElementsByTagName("h2")) {
         headingNode.onclick = toggleHeading;
     }
+
+    // Toggles the heading bullet between a plus and a minus.
     function toggleHeading() {
         if (this.getAttribute("class") == "minus") {
             this.removeAttribute("class", "minus");
@@ -17,6 +26,7 @@ window.onload = function() {
         }
     }
 
+    // The(rather ugly) JavaScript version of the (more concise) jQuery code.
     let httpRequest;
     document.getElementById("fetch").onclick = function() {
         httpRequest = new XMLHttpRequest();
@@ -28,7 +38,8 @@ window.onload = function() {
         httpRequest.open('GET', "/fetch?name=jQuery-AJAX");
         httpRequest.send();
         console.log("XMLHttpRequest request sent...");
-    }
+    };
+
     function alertContents() {
         try {
             if (httpRequest.readyState === XMLHttpRequest.DONE) {
@@ -52,4 +63,4 @@ window.onload = function() {
             console.log("XMLHttpRequest result failed..." + e);
         }
     }
-}
+};
