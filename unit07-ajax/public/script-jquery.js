@@ -35,7 +35,7 @@ $(document).ready(function () {
                 }, function (xhr) {
                     console.log('AJAX request failed...');
                     $("#fetch").next("div").html("<p>" + xhr.statusText + "</p>");
-                })
+                });
             }
         }
     );
