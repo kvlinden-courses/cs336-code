@@ -9,10 +9,6 @@
  *
  */
 
-// db
-// use cs336
-// show collections
-
 // Crud
 db.soldiers.insertOne({name: "joe", rank: "captain", serial_number: 123456789});
 db.soldiers.insertMany([
@@ -34,10 +30,9 @@ db.soldiers.find({}).pretty();
 db.soldiers.deleteOne({name: "ryan"});
 db.soldiers.find({}).pretty();
 
-// Cleanup by deleting the soldier records.
-db.soldiers.remove({});
 
 // 1-M relationships using embedding (denormalized)
+db.soldiers.remove({});
 db.soldiers.insertOne({
     name: "joe",
     rank: "captain",
@@ -60,9 +55,6 @@ db.soldiers.insertMany([
 db.soldiers.find({name: "joe"})[0].commands.map(function (id) {
     return db.soldiers.findOne({_id: id});
 });
-
-// M-M relationships using embedding (denormalized)
-db.soldiers.remove({});
 
 // M-M relationships using bi-directional document references (denormalized)
 db.soldiers.remove({});
