@@ -7,5 +7,6 @@ bundled using WebPack. In development mode, it will run:
 - a development server on port 3001 to serve up the application (http://localhost:3001/).
 - a proxy server on port 3000 to serve up data (http://localhost:3000/api/comments).
 
-If versioning becomes a problem, use the explict module version settings given
-in `package.json`.
+If versioning becomes a problem, use the explicit module version settings given
+in `package.json`. Note that the scripts provided here are configured for Linux.
+For Windows, you can run the backgrounded tasks individually.
