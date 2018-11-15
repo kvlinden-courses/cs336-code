@@ -1,4 +1,4 @@
-// Inflate this template according to the instructions given in lab 13.
+// Inflate this template according to the instructions given in the lab.
 
 import { createStore } from 'redux';
 

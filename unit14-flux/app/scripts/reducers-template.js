@@ -1,4 +1,4 @@
-// Add this code to flux.js according to the instruction given in lab 13.
+// Add this code to flux.js according to the instruction given in the lab.
 
 let Reducers = {
 
