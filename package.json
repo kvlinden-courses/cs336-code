@@ -1,8 +1,8 @@
 {
-  "name": "unit13-router",
+  "name": "unit11-heroku",
   "author": "kvlinden",
   "version": "0.0.0",
-  "description": "Router-enhanced version of the Facebook tutorial",
+  "description": "Heroku-deployed version of the Facebook tutorial",
   "license": "ISC",
   "main": "server.js",
   "dependencies": {
@@ -23,7 +23,6 @@
     "postcss-loader": "^1.0.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
-    "react-router": "^3.0.0",
     "remarkable": "^1.7.1",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.3"
@@ -35,7 +34,7 @@
   "scripts": {
     "build": "webpack --progress",
     "stop": "kill $(pgrep node)",
-    "dev": "nodemon --ignore app/ server.js & webpack-dev-server --progress --history-api-fallback &",
+    "dev": "nodemon --ignore app/ server.js & webpack-dev-server --progress &",
     "install": "webpack --progress --config ./webpack.production.config.js",
     "start": "node server.js"
   }
