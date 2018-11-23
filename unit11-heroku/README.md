@@ -6,5 +6,5 @@ The lab will upgrade the application from lab 10 to deploy to Heroku
 using a git subtree branch. Look here for the
 [running app](https://comments-kvlinden.herokuapp.com/).
 
-We maintain this public version of the full repo because deploying from private
-GitHub repos is tricky.
+We maintain this public version of the full repo because deploying from
+private GitHub repos is trickier.
