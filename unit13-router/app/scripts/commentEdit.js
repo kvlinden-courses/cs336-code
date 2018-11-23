@@ -34,7 +34,7 @@ module.exports = React.createClass({
         var updatedComment = {
             author: this.state.author.trim(),
             text: this.state.text.trim()
-        }
+        };
         $.ajax({
             url: API_URL + "/" + this.props.params.id,
             dataType: 'json',

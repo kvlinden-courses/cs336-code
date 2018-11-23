@@ -1,9 +1,9 @@
 {
-    "name": "react-tutorial",
+    "name": "unit11-heroku",
+    "author": "kvlinden",
     "version": "0.0.0",
-    "private": true,
-    "license": "see LICENSE file",
-    "description": "Code from the React tutorial.",
+    "description": "Heroku-deployed version of the Facebook tutorial",
+    "license": "ISC",
     "main": "server.js",
     "dependencies": {
         "assert": "^1.4.1",
@@ -33,27 +33,9 @@
     },
     "scripts": {
         "build": "webpack --progress",
-        "dev": "kill $(pgrep node) ; nodemon --ignore app/ server.js & webpack-dev-server --progress &",
         "stop": "kill $(pgrep node)",
+        "dev": "nodemon --ignore app/ server.js & webpack-dev-server --progress &",
         "install": "webpack --progress --config ./webpack.production.config.js",
         "start": "node server.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/reactjs/react-tutorial.git"
-    },
-    "keywords": [
-        "react",
-        "tutorial",
-        "comment",
-        "example"
-    ],
-    "author": "petehunt",
-    "bugs": {
-        "url": "https://github.com/reactjs/react-tutorial/issues"
-    },
-    "homepage": "https://github.com/reactjs/react-tutorial",
-    "engines": {
-        "node": "^4.x"
     }
 }
